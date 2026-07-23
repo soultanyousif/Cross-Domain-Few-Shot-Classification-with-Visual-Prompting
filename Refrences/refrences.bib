@@ -1,0 +1,260 @@
+@InProceedings{pmlr-v139-radford21a,
+  title = 	 {Learning Transferable Visual Models From Natural Language Supervision},
+  author =       {Radford, Alec and Kim, Jong Wook and Hallacy, Chris and Ramesh, Aditya and Goh, Gabriel and Agarwal, Sandhini and Sastry, Girish and Askell, Amanda and Mishkin, Pamela and Clark, Jack and Krueger, Gretchen and Sutskever, Ilya},
+  booktitle = 	 {Proceedings of the 38th International Conference on Machine Learning},
+  pages = 	 {8748--8763},
+  year = 	 {2021},
+  editor = 	 {Meila, Marina and Zhang, Tong},
+  volume = 	 {139},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {18--24 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v139/radford21a/radford21a.pdf},
+  url = 	 {https://proceedings.mlr.press/v139/radford21a.html},
+  abstract = 	 {State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories. This restricted form of supervision limits their generality and usability since additional labeled data is needed to specify any other visual concept. Learning directly from raw text about images is a promising alternative which leverages a much broader source of supervision. We demonstrate that the simple pre-training task of predicting which caption goes with which image is an efficient and scalable way to learn SOTA image representations from scratch on a dataset of 400 million (image, text) pairs collected from the internet. After pre-training, natural language is used to reference learned visual concepts (or describe new ones) enabling zero-shot transfer of the model to downstream tasks. We study the performance of this approach by benchmarking on over 30 different existing computer vision datasets, spanning tasks such as OCR, action recognition in videos, geo-localization, and many types of fine-grained object classification. The model transfers non-trivially to most tasks and is often competitive with a fully supervised baseline without the need for any dataset specific training. For instance, we match the accuracy of the original ResNet-50 on ImageNet zero-shot without needing to use any of the 1.28 million training examples it was trained on.}
+}
+
+@InProceedings{10.1007/978-3-031-19827-4_41,
+author="Jia, Menglin
+and Tang, Luming
+and Chen, Bor-Chun
+and Cardie, Claire
+and Belongie, Serge
+and Hariharan, Bharath
+and Lim, Ser-Nam",
+editor="Avidan, Shai
+and Brostow, Gabriel
+and Ciss{\'e}, Moustapha
+and Farinella, Giovanni Maria
+and Hassner, Tal",
+title="Visual Prompt Tuning",
+booktitle="Computer Vision -- ECCV 2022",
+year="2022",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="709--727",
+abstract="The current modus operandi in adapting pre-trained models involves updating all the backbone parameters, i.e., full fine-tuning. This paper introduces Visual Prompt Tuning (VPT) as an efficient and effective alternative to full fine-tuning for large-scale Transformer models in vision. Taking inspiration from recent advances in efficiently tuning large language models, VPT introduces only a small amount (less than 1{\%} of model parameters) of trainable parameters in the input space while keeping the model backbone frozen. Via extensive experiments on a wide variety of downstream recognition tasks, we show that VPT achieves significant performance gains compared to other parameter efficient tuning protocols. Most importantly, VPT even outperforms full fine-tuning in many cases across model capacities and training data scales, while reducing per-task storage cost. Code is available at github.com/kmnp/vpt.",
+isbn="978-3-031-19827-4"
+}
+
+@misc{dosovitskiy2021imageworth16x16words,
+      title={An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale}, 
+      author={Alexey Dosovitskiy and Lucas Beyer and Alexander Kolesnikov and Dirk Weissenborn and Xiaohua Zhai and Thomas Unterthiner and Mostafa Dehghani and Matthias Minderer and Georg Heigold and Sylvain Gelly and Jakob Uszkoreit and Neil Houlsby},
+      year={2021},
+      eprint={2010.11929},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2010.11929}, 
+}
+
+@inproceedings{li-liang-2021-prefix,
+    title = "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+    author = "Li, Xiang Lisa  and
+      Liang, Percy",
+    editor = "Zong, Chengqing  and
+      Xia, Fei  and
+      Li, Wenjie  and
+      Navigli, Roberto",
+    booktitle = "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.acl-long.353/",
+    doi = "10.18653/v1/2021.acl-long.353",
+    pages = "4582--4597",
+    abstract = "Fine-tuning is the de facto way of leveraging large pretrained language models for downstream tasks. However, fine-tuning modifies all the language model parameters and therefore necessitates storing a full copy for each task. In this paper, we propose prefix-tuning, a lightweight alternative to fine-tuning for natural language generation tasks, which keeps language model parameters frozen and instead optimizes a sequence of continuous task-specific vectors, which we call the prefix. Prefix-tuning draws inspiration from prompting for language models, allowing subsequent tokens to attend to this prefix as if it were ``virtual tokens''. We apply prefix-tuning to GPT-2 for table-to-text generation and to BART for summarization. We show that by learning only 0.1{\%} of the parameters, prefix-tuning obtains comparable performance in the full data setting, outperforms fine-tuning in low-data settings, and extrapolates better to examples with topics that are unseen during training."
+}
+
+@inproceedings{lester-etal-2021-power,
+    title = "The Power of Scale for Parameter-Efficient Prompt Tuning",
+    author = "Lester, Brian  and
+      Al-Rfou, Rami  and
+      Constant, Noah",
+    editor = "Moens, Marie-Francine  and
+      Huang, Xuanjing  and
+      Specia, Lucia  and
+      Yih, Scott Wen-tau",
+    booktitle = "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2021",
+    address = "Online and Punta Cana, Dominican Republic",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.emnlp-main.243/",
+    doi = "10.18653/v1/2021.emnlp-main.243",
+    pages = "3045--3059",
+    abstract = "In this work, we explore ``prompt tuning,'' a simple yet effective mechanism for learning ``soft prompts'' to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3{'}s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method ``closes the gap'' and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed ``prefix tuning'' of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient ``prompt ensembling.'' We release code and model checkpoints to reproduce our experiments."
+}
+
+@ARTICLE{8736785,
+  author={Helber, Patrick and Bischke, Benjamin and Dengel, Andreas and Borth, Damian},
+  journal={IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, 
+  title={EuroSAT: A Novel Dataset and Deep Learning Benchmark for Land Use and Land Cover Classification}, 
+  year={2019},
+  volume={12},
+  number={7},
+  pages={2217-2226},
+  keywords={Satellites;Earth;Remote sensing;Machine learning;Spatial resolution;Feature extraction;Benchmark testing;Dataset;deep convolutional neural network;deep learning;earth observation;land cover classification;land use classification;machine learning;remote sensing;satellite image classification;satellite images},
+  doi={10.1109/JSTARS.2019.2918242}}
+
+@misc{cimpoi2013describingtextureswild,
+      title={Describing Textures in the Wild}, 
+      author={Mircea Cimpoi and Subhransu Maji and Iasonas Kokkinos and Sammy Mohamed and Andrea Vedaldi},
+      year={2013},
+      eprint={1311.3618},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/1311.3618}, 
+}
+
+@INPROCEEDINGS{4756141,
+  author={Nilsback, Maria-Elena and Zisserman, Andrew},
+  booktitle={2008 Sixth Indian Conference on Computer Vision, Graphics & Image Processing}, 
+  title={Automated Flower Classification over a Large Number of Classes}, 
+  year={2008},
+  volume={},
+  number={},
+  pages={722-729},
+  keywords={Shape;Kernel;Distributed computing;Support vector machines;Support vector machine classification;object classification;segmentation},
+  doi={10.1109/ICVGIP.2008.47}}
+
+@inproceedings{NIPS2017_3f5ee243,
+ author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, \L ukasz and Polosukhin, Illia},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {I. Guyon and U. Von Luxburg and S. Bengio and H. Wallach and R. Fergus and S. Vishwanathan and R. Garnett},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Attention is All you Need},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf},
+ volume = {30},
+ year = {2017}
+}
+
+@InProceedings{pmlr-v97-houlsby19a,
+  title = 	 {Parameter-Efficient Transfer Learning for {NLP}},
+  author =       {Houlsby, Neil and Giurgiu, Andrei and Jastrzebski, Stanislaw and Morrone, Bruna and De Laroussilhe, Quentin and Gesmundo, Andrea and Attariyan, Mona and Gelly, Sylvain},
+  booktitle = 	 {Proceedings of the 36th International Conference on Machine Learning},
+  pages = 	 {2790--2799},
+  year = 	 {2019},
+  editor = 	 {Chaudhuri, Kamalika and Salakhutdinov, Ruslan},
+  volume = 	 {97},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {09--15 Jun},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v97/houlsby19a/houlsby19a.pdf},
+  url = 	 {https://proceedings.mlr.press/v97/houlsby19a.html},
+  abstract = 	 {Fine-tuning large pretrained models is an effective transfer mechanism in NLP. However, in the presence of many downstream tasks, fine-tuning is parameter inefficient: an entire new model is required for every task. As an alternative, we propose transfer with adapter modules. Adapter modules yield a compact and extensible model; they add only a few trainable parameters per task, and new tasks can be added without revisiting previous ones. The parameters of the original network remain fixed, yielding a high degree of parameter sharing. To demonstrate adapter’s effectiveness, we transfer the recently proposed BERT Transformer model to $26$ diverse text classification tasks, including the GLUE benchmark. Adapters attain near state-of-the-art performance, whilst adding only a few parameters per task. On GLUE, we attain within $0.8%$ of the performance of full fine-tuning, adding only $3.6%$ parameters per task. By contrast, fine-tuning trains $100%$ of the parameters per task.}
+}
+@misc{hu2021loralowrankadaptationlarge,
+      title={LoRA: Low-Rank Adaptation of Large Language Models}, 
+      author={Edward J. Hu and Yelong Shen and Phillip Wallis and Zeyuan Allen-Zhu and Yuanzhi Li and Shean Wang and Lu Wang and Weizhu Chen},
+      year={2021},
+      eprint={2106.09685},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2106.09685}, 
+}
+
+@misc{bahng2022exploringvisualpromptsadapting,
+      title={Exploring Visual Prompts for Adapting Large-Scale Models}, 
+      author={Hyojin Bahng and Ali Jahanian and Swami Sankaranarayanan and Phillip Isola},
+      year={2022},
+      eprint={2203.17274},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2203.17274}, 
+}
+
+@INPROCEEDINGS{7780459,
+  author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  booktitle={2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}, 
+  title={Deep Residual Learning for Image Recognition}, 
+  year={2016},
+  volume={},
+  number={},
+  pages={770-778},
+  keywords={Training;Degradation;Complexity theory;Image recognition;Neural networks;Visualization;Image segmentation},
+  doi={10.1109/CVPR.2016.90}}
+@unknown{unknown,
+author = {Zhou, Kaiyang and Yang, Jingkang and Loy, Chen Change and Liu, Ziwei},
+year = {2021},
+month = {09},
+pages = {},
+title = {Learning to Prompt for Vision-Language Models},
+doi = {10.48550/arXiv.2109.01134}
+}
+
+@misc{zhou2022conditionalpromptlearningvisionlanguage,
+      title={Conditional Prompt Learning for Vision-Language Models}, 
+      author={Kaiyang Zhou and Jingkang Yang and Chen Change Loy and Ziwei Liu},
+      year={2022},
+      eprint={2203.05557},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2203.05557}, 
+}
+
+@inproceedings{NIPS2016_90e13578,
+ author = {Vinyals, Oriol and Blundell, Charles and Lillicrap, Timothy and kavukcuoglu, koray and Wierstra, Daan},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {D. Lee and M. Sugiyama and U. Luxburg and I. Guyon and R. Garnett},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Matching Networks for One Shot Learning},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2016/file/90e1357833654983612fb05e3ec9148c-Paper.pdf},
+ volume = {29},
+ year = {2016}
+}
+
+@inproceedings{NIPS2017_cb8da676,
+ author = {Snell, Jake and Swersky, Kevin and Zemel, Richard},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {I. Guyon and U. Von Luxburg and S. Bengio and H. Wallach and R. Fergus and S. Vishwanathan and R. Garnett},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Prototypical Networks for Few-shot Learning},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2017/file/cb8da6767461f2812ae4290eac7cbc42-Paper.pdf},
+ volume = {30},
+ year = {2017}
+}
+
+
+@InProceedings{pmlr-v70-finn17a,
+  title = 	 {Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks},
+  author =       {Chelsea Finn and Pieter Abbeel and Sergey Levine},
+  booktitle = 	 {Proceedings of the 34th International Conference on Machine Learning},
+  pages = 	 {1126--1135},
+  year = 	 {2017},
+  editor = 	 {Precup, Doina and Teh, Yee Whye},
+  volume = 	 {70},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {06--11 Aug},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v70/finn17a/finn17a.pdf},
+  url = 	 {https://proceedings.mlr.press/v70/finn17a.html},
+  abstract = 	 {We propose an algorithm for meta-learning that is model-agnostic, in the sense that it is compatible with any model trained with gradient descent and applicable to a variety of different learning problems, including classification, regression, and reinforcement learning. The goal of meta-learning is to train a model on a variety of learning tasks, such that it can solve new learning tasks using only a small number of training samples. In our approach, the parameters of the model are explicitly trained such that a small number of gradient steps with a small amount of training data from a new task will produce good generalization performance on that task. In effect, our method trains the model to be easy to fine-tune. We demonstrate that this approach leads to state-of-the-art performance on two few-shot image classification benchmarks, produces good results on few-shot regression, and accelerates fine-tuning for policy gradient reinforcement learning with neural network policies.}
+}
+
+@misc{wang2020generalizingexamplessurveyfewshot,
+      title={Generalizing from a Few Examples: A Survey on Few-Shot Learning}, 
+      author={Yaqing Wang and Quanming Yao and James Kwok and Lionel M. Ni},
+      year={2020},
+      eprint={1904.05046},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/1904.05046}, 
+}
+
+@article{YANG2026100835,
+title = {A comprehensive review for Generalized Few-Shot Image Classification},
+journal = {Array},
+volume = {30},
+pages = {100835},
+year = {2026},
+issn = {2590-0056},
+doi = {https://doi.org/10.1016/j.array.2026.100835},
+url = {https://www.sciencedirect.com/science/article/pii/S259000562600158X},
+author = {Sai Yang and Bin Hu and Xiaoxin Wu and Fan Liu},
+keywords = {Deep learning, Generalized few-shot image classification, Implemented Artificial Intelligence, Application of Artificial Intelligence},
+abstract = {In the era of deep learning, Few-Shot Learning (FSL) is a promising direction to bridge the gap between application of Artificial Intelligence (AI) and human intelligence. The specific implemented AI application in the image classification field of few-shot image classification has achieved tremendous developments in the past decade, thereby gradually evolving to be the Generalized Few-Shot image Classification (GFSC) with several groups. This paper comprehensively reviews recent advances in GFSC and highlights possible future work. Firstly, we formulate the formal definition for each group of GFSC, and elaborate on the difference between GFSC and related machine learning tasks to avoid conceptual confusion. Based on the formulation, we provide a comprehensive review of GFSC in vanilla few-shot classification, semi-supervised few-shot classification, unsupervised few-sot classifications, cross-domain few-shot classification, few-shot open-set recognition, and robust few-shot classification, covering various aspects of each sub-group ranging from algorithm comparison, detailed analysis to heuristic remarks. Next, performance comparisons of the representative reviewed methods on benchmark datasets are provided and discussed. Finally, we conclude this survey by highlighting several promising directions that should be further addressed in the future.}
+}
