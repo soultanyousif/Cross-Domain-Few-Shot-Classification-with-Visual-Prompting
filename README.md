@@ -99,8 +99,3 @@ Python, PyTorch, Hugging Face Transformers (CLIP), Hugging Face Datasets, torchv
 
 All random seeds are fixed (`SEED = 42`) across Python, NumPy, and PyTorch, and few-shot subsets are drawn deterministically, so results are reproducible end to end from a single script.
 
-## Possible Extensions
-
-- Extend the prompt-length ablation to DTD and Flowers102 to check whether the optimal prompt length generalizes across domains or is EuroSAT-specific
-- Add a hybrid method that combines VPT-Deep with a partially unfrozen final backbone block
-- Evaluate cross-dataset transfer: train prompts on one dataset and test zero-shot on another
