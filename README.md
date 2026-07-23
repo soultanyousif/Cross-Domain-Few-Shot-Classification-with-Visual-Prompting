@@ -47,6 +47,9 @@ Few-shot subsets are drawn with stratified, seeded sampling to guarantee an exac
 
 **Parameter efficiency has a clear ordering.** VPT-Deep delivers the best accuracy-per-parameter trade-off among all four methods, followed by VPT-Shallow and Linear Probing at near-identical trainable parameter counts but a meaningful accuracy gap between them, with Full Fine-Tuning trailing on both axes.
 
+<img width="1790" height="463" alt="accuracy_vs_shots" src="https://github.com/user-attachments/assets/1d7f9838-a9f7-4756-b3ef-09b8571e654d" />
+
+
 ## Results Summary
 
 Mean accuracy across all shot counts, by method and dataset:
@@ -57,6 +60,9 @@ Mean accuracy across all shot counts, by method and dataset:
 | DTD | 46.82% | 54.45% | 56.52% | 53.32% |
 | Flowers102 | 68.34% | 88.34% | 86.64% | 88.62% |
 
+<img width="989" height="440" alt="mean_accuracy_by_dataset" src="https://github.com/user-attachments/assets/2fb7b4a1-ae11-48b3-b499-68202e13af85" />
+
+
 16-shot accuracy (highest-data setting):
 
 | Dataset | Full Fine-Tune | Linear Probe | VPT-Deep | VPT-Shallow |
@@ -64,6 +70,25 @@ Mean accuracy across all shot counts, by method and dataset:
 | EuroSAT | 93.74% | 81.81% | 93.30% | 87.96% |
 | DTD | 71.33% | 70.64% | 73.83% | 71.01% |
 | Flowers102 | 92.03% | 95.82% | 96.50% | 96.08% |
+
+<img width="705" height="290" alt="heatmap_16shot" src="https://github.com/user-attachments/assets/7bb8784a-6344-4718-b133-fb7452549a25" />
+
+
+<img width="689" height="440" alt="parameter_efficiency" src="https://github.com/user-attachments/assets/5d969837-0e69-491e-b247-f8b9ad5f0d0c" />
+
+
+## Ablation Study
+
+Before the main cross-method comparison, prompt length was swept across {1, 4, 8, 16, 32, 64} for both VPT variants at every shot count on EuroSAT, to identify an appropriate prompt length rather than assuming a single default works everywhere. The optimal prompt length shifts with shot count rather than staying fixed, which is why Phase 2 uses a per-(method, shot count) prompt length instead of one constant value.
+
+<img width="1389" height="446" alt="phase1_prompt_length_curves" src="https://github.com/user-attachments/assets/d9ddbfbd-646e-466b-9e5f-e9fd4c13aea4" />
+
+
+## Detailed Diagnostics
+
+Row-normalized confusion matrices and full per-class precision/recall reports were generated for all four methods at the 16-shot setting. EuroSAT is shown below as a representative example; the equivalent DTD and Flowers102 confusion matrices are included in the repository under the results directory.
+
+<img width="2380" height="509" alt="confusion_matrix_eurosat_16shot" src="https://github.com/user-attachments/assets/1eadc237-c37a-4db7-8eac-80154fb7e9bc" />
 
 ## Repository Contents
 
