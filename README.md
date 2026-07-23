@@ -90,13 +90,6 @@ Row-normalized confusion matrices and full per-class precision/recall reports we
 
 <img width="2380" height="509" alt="confusion_matrix_eurosat_16shot" src="https://github.com/user-attachments/assets/1eadc237-c37a-4db7-8eac-80154fb7e9bc" />
 
-## Repository Contents
-
-- Full training and evaluation pipeline for all four methods, built on a shared frozen CLIP ViT-B/16 backbone
-- Phase 1 ablation sweep over prompt length and shot count, with generated heatmaps and line plots
-- Phase 2 cross-method, cross-dataset evaluation with accuracy-vs-shots curves, grouped bar charts, and a parameter-efficiency scatter plot
-- 16-shot diagnostics: full classification reports and row-normalized confusion matrices per dataset and method
-- Raw results exported as CSV (`phase1_ablation.csv`, `phase2_results.csv`, `per_class_accuracy.csv`) for independent analysis
 
 ## Tech Stack
 
